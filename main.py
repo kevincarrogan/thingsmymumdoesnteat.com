@@ -17,7 +17,7 @@ def slugify(string):
 
 def get_context_data(request, food, attribution_username, attribution_name):
     return {
-        "food": food.title(),
+        "food": food,
         "attribution_username": attribution_username,
         "attribution_name": attribution_name,
         "title": "Things my mum doesn't eat",
