@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta itemprop="name" content="{{ title }}" />
+        <meta itemprop="description" content="{{ description }}" />
+
+        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:description" content="{{ description }}" />
+
+        <link rel="icon" href="/static/favicon.ico" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito:700|Nunito+Sans:700&display=swap" rel="stylesheet">
+    </head>
+    <body class="{{ body_class }}">
+
+        <header>
+            <h1>{{ title }}</h1>
+        </header>
+
+        <main>
+            <h1>
+                <div class="item food">{{ food }}</div>
+            </h1>
+            <img class="image" src="/static/images/{{ food }}@2x.jpg" srcset="/static/images/{{ food }}.jpg, /static/images/{{ food }}@2x.jpg 2x" />
+            <a class="attribution" style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@{{ attribution_username }}?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from {{ attribution_name }}"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">{{ attribution_name }}</span></a>
+        </main>
+    </body>
+</html>
